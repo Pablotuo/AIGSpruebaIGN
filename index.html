@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página</title>
+    <title>Mi Mapa con Leaflet</title>
 
-    <!-- Conectar con style.css -->
+    <!-- Leaflet CSS -->
+    <link 
+      rel="stylesheet" 
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <!-- Tu propio CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>¡Hola mundo! 😎</h1>
-    <p>Esta es mi primera página en GitHub Pages</p>
+    <h1>Mi mapa de lugares visitados 🌍</h1>
+    <div id="map"></div>
 
-    <button id="boton">Haz clic en mí</button>
+    <!-- Leaflet JS -->
+    <script 
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
 
-    <!-- Conectar con script.js -->
+    <!-- Tu JS -->
     <script src="script.js"></script>
 </body>
 </html>
