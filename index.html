@@ -1,27 +1,22 @@
 <!DOCTYPE html>               <!--Para que el navegador muestre el documento en HTML -->
 <html lang="es">              <!-- Abre el documento en Español -->
-<head>                         <!-- Lo siguiente no se muestra pero es configuracion de la pagina -->
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>ChichiHitos</title>
-
-    <!-- Estilos -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-</head>
+<head>                        <!-- Abre la configuracion de la pagina -->
+    <meta charset="UTF-8">    <!-- Tipo de carcteres  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!-- Para que funcione en Cel, Tab y PC  -->
+    <title>ChichiHitos</title>    <!-- Texto en la pestaña del navegador -->
+    <link rel="stylesheet" href="style.css">    <!-- Carga el archivo de Estilos -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />   <!--  Carga la libreria de Leaflet CSS -->
+</head>                        <!-- Cierra la configuracion de la pagina -->
 
 <body>
+    <h1 class="titulo-superior"> ...TRAS LA HUELLA DE LOS HITOS DEL IGN (1940 - 1985)</h1>    <!-- Titulo que se modifica en el style.css -->
 
-    <h1 class="titulo-superior"> ...TRAS LA HUELLA DE LOS HITOS DEL IGN (1940 - 1985)</h1>
-
-    <div id="map"></div> <!-- Mapa -->
+    <div id="map"></div> <!-- Cuadro vacio para Mapa, que se carga desde script.js -->
 
     <h1 class="titulo-inferior">
         En este mapa se estarán subiendo las coordenadas exactas de los Hitos del IGN que he revisado desde el 2022.
         <span class="powered">Powered by Pablo Yzaguirre</span>
-    </h1>
+    </h1>      <!-- Texto debajo del mapa -->
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
