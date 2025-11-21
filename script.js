@@ -1,21 +1,56 @@
-// Crear el mapa (coordenadas iniciales)
-var map = L.map('map').setView([10.5, -66.9], 5); // Venezuela por ejemplo
+// Crear el mapa centrado en Costa Rica
+var map = L.map('map').setView([9.7489, -83.7534], 8);
 
-// Capa de mapa base (OpenStreetMap)
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-}).addTo(map);
+// Capa base: OpenStreetMap
+var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+});
 
-// Lista de puntos visitados
-var lugares = [
-    { nombre: "Lugar 1", coords: [10.496, -66.848] },
-    { nombre: "Lugar 2", coords: [10.420, -64.180] },
-    { nombre: "Lugar 3", coords: [8.596, -71.145] }
+// Capa base: Satélite ESRI
+var satellite = L.tileLayer(
+    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    {
+        maxZoom: 19,
+        attribution: '© ESRI World Imagery'
+    }
+);
+
+// Mostrar OSM por defecto
+street.addTo(map);
+
+// Control de capas
+var baseMaps = {
+    "Mapa Claro (OSM)": street,
+    "Satélite": satellite
+};
+
+L.control.layers(baseMaps).addTo(map);
+
+// Lista de lugares con latitudes, longitudes, nombres, descripciones y la imagen
+var lugares = [ 
+  {
+    lat: 9.992554,
+    lon: -83.024251,
+    nombre: "57-LA",
+    descripcion: "Blanco",
+    imagen: "https://github.com/Pablotuo/ChichiHitos/blob/main/imagenes/image%20(3).png?raw=true"
+  },
+  {
+    lat: 10.992554,
+    lon: -84.024251,
+    nombre: "57-LB",
+    descripcion: "Blanco",
+    imagen: "https://github.com/Pablotuo/ChichiHitos/blob/main/images/20220501_122303.jpg?raw=true"
+  }
 ];
 
-// Agregar marcadores
-lugares.forEach(l => {
-    L.marker(l.coords)
-      .addTo(map)
-      .bindPopup(`<b>${l.nombre}</b><br>(${l.coords[0]}, ${l.coords[1]})`);
+// Agregar los marcadores al mapa
+lugares.forEach(function(lugar) {
+    L.marker([lugar.lat, lugar.lon]).addTo(map)
+        .bindPopup(
+            "<b>" + lugar.nombre + "</b><br>" +
+            lugar.descripcion + "<br>" +
+            "<img src='" + lugar.imagen + "' alt='" + lugar.nombre +
+            "' style='width:350px; height:auto;'>"
+        );
 });
