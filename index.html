@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Mapa con Leaflet</title>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>ChichiHitos</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- Leaflet CSS -->
-    <link 
-      rel="stylesheet" 
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-
-    <!-- Tu propio CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
+
 <body>
 
-    <h1>Mi mapa de lugares visitados 🌍</h1>
-    <div id="map"></div>
+    <h1 class="titulo-superior"> ...TRAS LA HUELLA DE LOS HITOS DEL IGN (1940 - 1985)</h1>
+
+    <div id="map"></div> <!-- Mapa -->
+
+    <h1 class="titulo-inferior">
+        En este mapa se estarán subiendo las coordenadas exactas de los Hitos del IGN que he revisado desde el 2022.
+        <span class="powered">Powered by Pablo Yzaguirre</span>
+    </h1>
 
     <!-- Leaflet JS -->
-    <script 
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-    </script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <!-- Tu JS -->
+    <!-- Tu script -->
     <script src="script.js"></script>
+
 </body>
 </html>
