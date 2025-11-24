@@ -1,5 +1,6 @@
 <!DOCTYPE html>               <!--Para que el navegador muestre el documento en HTML -->
 <html lang="es">              <!-- Abre el documento en Español -->
+    
 <head>                        <!-- Abre la configuracion de la pagina -->
     <meta charset="UTF-8">    <!-- Tipo de carcteres  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!-- Para que funcione en Cel, Tab y PC  -->
@@ -8,21 +9,17 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />   <!--  Carga la libreria de Leaflet CSS -->
 </head>                        <!-- Cierra la configuracion de la pagina -->
 
+
+    
 <body>
-    <h1 class="titulo-superior"> ...TRAS LA HUELLA DE LOS HITOS DEL IGN (1940 - 1985)</h1>    <!-- Titulo que se modifica en el style.css -->
-
+    <h1 class="titulo-superior"> ...TRAS LA HUELLA DE LOS HITOS DEL IGN (1940 - 1985)</h1>    <!-- Titulo sobre el mapa que se modifica en el style.css -->
     <div id="map"></div> <!-- Cuadro vacio para Mapa, que se carga desde script.js -->
-
-    <h1 class="titulo-inferior">
+    <h1 class="titulo-inferior">        <!-- Titulo debajo del mapa que se modifica en el style.css -->
         En este mapa se estarán subiendo las coordenadas exactas de los Hitos del IGN que he revisado desde el 2022.
-        <span class="powered">Powered by Pablo Yzaguirre</span>
-    </h1>      <!-- Texto debajo del mapa -->
-
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-    <!-- Tu script -->
-    <script src="script.js"></script>
-
+        <span class="powered">Powered by Pablo Yzaguirre</span>      <!-- funcion que estiliza el otro reglon -->
+    </h1>      
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>      <!-- carga el motor del LeaftLet para que arranque-->
+    <script src="script.js"></script>       <!--Carga el script.js para que todo corra bien -->
 </body>
+    
 </html>
