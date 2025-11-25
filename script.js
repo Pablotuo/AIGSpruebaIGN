@@ -1,11 +1,11 @@
 // Crear la variable map, crea un mapa y lo muestra en las coordenadas(lat,Lon) con un zoom determinado(8).
 var map = L.map('map').setView([9.7489, -83.7534], 8);
-// Capa base: OpenStreetMap
+// Activa capabase de OpenStreetMap 
 var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
+    attribution: '&copy; OpenStreetMap contributors' //Esto ultimo no se que es 
 });
 
-// Capa base: Satélite ESRI
+// Activa capabase Satélite ESRI
 var satellite = L.tileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     {
