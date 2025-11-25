@@ -1,6 +1,5 @@
-// Crear la variable map, osea el mapa centrado en Costa Rica
+// Crear la variable map, crea un mapa y lo muestra en las coordenadas(lat,Lon) con un zoom determinado(8).
 var map = L.map('map').setView([9.7489, -83.7534], 8);
-
 // Capa base: OpenStreetMap
 var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
