@@ -1,4 +1,4 @@
-// Crear el mapa centrado en Costa Rica
+// Crear la variable map, osea el mapa centrado en Costa Rica
 var map = L.map('map').setView([9.7489, -83.7534], 8);
 
 // Capa base: OpenStreetMap
