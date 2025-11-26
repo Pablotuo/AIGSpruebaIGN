@@ -4,6 +4,30 @@ var map = L.map('map').setView([9.7489, -83.7534], 8);
 var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors' //Esto ultimo no se que es 
 });
+
+
+// Íconos de colores
+var iconVerde = L.ExtraMarkers.icon({
+    markerColor: 'green',
+    shape: 'circle',
+    prefix: 'fa',
+    icon: 'fa-check'
+});
+
+var iconRojo = L.ExtraMarkers.icon({
+    markerColor: 'red',
+    shape: 'circle',
+    prefix: 'fa',
+    icon: 'fa-xmark'
+});
+
+var iconAmarillo = L.ExtraMarkers.icon({
+    markerColor: 'yellow',
+    shape: 'circle',
+    prefix: 'fa',
+    icon: 'fa-question'
+});
+
 // Activa capabase Satélite ESRI
 var satellite = L.tileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
@@ -30,6 +54,7 @@ var lugares = [
     lon: -83.024251,
     nombre: "57-LA",
     descripcion: "Blanco",
+    "color": "verde",
     imagen: "https://github.com/Pablotuo/ChichiHitos/blob/main/imagenes/image%20(3).png?raw=true"
   },
   {
@@ -37,6 +62,7 @@ var lugares = [
     lon: -84.024251,
     nombre: "57-LB",
     descripcion: "Amarillo",
+    "color": "rojo",
     imagen: "https://github.com/Pablotuo/ChichiHitos/blob/main/images/20220501_122303.jpg?raw=true"
   }
 ];
