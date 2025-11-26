@@ -1,30 +1,51 @@
-<!DOCTYPE html>               <!--Para que el navegador muestre el documento en HTML -->
-<html lang="es">              <!-- Abre el documento en Español -->
-    
-<head>                        <!-- Abre la configuracion de la pagina -->
-    
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <!-- Documento estará en español -->
+
+<head>
+    <!-- ==================== LIBRERÍAS ==================== -->
+
+    <!-- Leaflet CSS (siempre primero) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Plugin ExtraMarkers CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.extra-markers/1.0.6/css/leaflet.extra-markers.min.css">
+
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ChichiHitos</title>
+
+    <!-- Tu propio CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <!-- Título superior -->
+    <h1 class="titulo-superior"> ...TRAS LA HUELLA DE LOS HITOS DEL IGN (1940 - 1985)</h1>
+
+    <!-- Contenedor del mapa -->
+    <div id="map"></div>
+
+    <!-- Título inferior -->
+    <h1 class="titulo-inferior">
+        En este mapa se estarán subiendo las coordenadas exactas de los Hitos del IGN que he revisado desde el 2022.
+        <br>
+        <span class="powered">Powered by Pablo Yzaguirre — Nov 2025</span>
+    </h1>
+
+    <!-- ==================== SCRIPTS ==================== -->
+
+    <!-- Carga Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Carga plugin ExtraMarkers (DESPUÉS de Leaflet) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.extra-markers/1.0.6/js/leaflet.extra-markers.min.js"></script>
 
-    
-    <meta charset="UTF-8">    <!-- Tipo de carcteres  -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!-- Para que funcione en Cel, Tab y PC  -->
-    <title>ChichiHitos</title>    <!-- Texto en la pestaña del navegador -->
-    <link rel="stylesheet" href="style.css">    <!-- Carga el archivo de Estilos -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />   <!--  Carga la libreria de Leaflet CSS -->
-</head>                        <!-- Cierra la configuracion de la pagina -->
+    <!-- Tu propio script -->
+    <script src="script.js"></script>
 
-
-    
-<body>
-    <h1 class="titulo-superior"> ...TRAS LA HUELLA DE LOS HITOS DEL IGN (1940 - 1985)</h1>    <!-- Titulo sobre el mapa que se modifica en el style.css -->
-    <div id="map"></div> <!-- Cuadro vacio para Mapa, que se carga desde script.js -->
-    <h1 class="titulo-inferior">        <!-- Titulo debajo del mapa que se modifica en el style.css -->
-        En este mapa se estarán subiendo las coordenadas exactas de los Hitos del IGN que he revisado desde el 2022.
-        <span class="powered">Powered by Pablo Yzaguirre Nov2025</span>      <!-- funcion que estiliza el otro reglon -->
-    </h1>      
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>      <!-- carga el motor del LeaftLet para que arranque-->
-    <script src="script.js"></script>       <!--Carga el script.js para que todo corra bien -->
 </body>
-    
+
 </html>
