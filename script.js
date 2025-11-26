@@ -69,7 +69,9 @@ var lugares = [
 
 // Agregar los marcadores al mapa
 lugares.forEach(function(lugar) {    //Recore la lista de Hitos
-    L.marker([lugar.lat, lugar.lon]).addTo(map)    //Crea el marcador 
+    // Elegir el icono según el color del objeto
+    let iconoElegido = (lugar.color === "verde") ? iconVerde : iconRojo;
+    L.marker([lugar.lat, lugar.lon],{ icon: iconoElegido }).addTo(map)    //Crea el marcador 
         .bindPopup(
             "<b>" + lugar.nombre + "</b><br>" +
             lugar.descripcion + "<br>" +
