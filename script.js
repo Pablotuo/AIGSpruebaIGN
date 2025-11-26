@@ -42,12 +42,12 @@ var lugares = [
 ];
 
 // Agregar los marcadores al mapa
-lugares.forEach(function(lugar) {
-    L.marker([lugar.lat, lugar.lon]).addTo(map)
+lugares.forEach(function(lugar) {    //Recore la lista de Hitos
+    L.marker([lugar.lat, lugar.lon]).addTo(map)    //Crea el marcador 
         .bindPopup(
             "<b>" + lugar.nombre + "</b><br>" +
             lugar.descripcion + "<br>" +
             "<img src='" + lugar.imagen + "' alt='" + lugar.nombre +
-            "' style='width:350px; height:auto;'>"
-        );
+            "' style='width:350px; height:auto;'>" 
+        ); // Popup con: negrita, descripcion foto a (350px)
 });
